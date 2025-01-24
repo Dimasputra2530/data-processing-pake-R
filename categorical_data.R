@@ -5,7 +5,7 @@ dataset = read.csv('Data.csv')
 
 # Taking care of missing data
 dataset$Age = ifelse(is.na(dataset$Age), #untuk menunjuk table mana yg mau di ambil pake $
-                     ave(dataset$Age, FUN = function(x) mean(x, na.rm = TRUE)),
+                     ave(dataset$Age, FUN = function(x) mean(x, na.rm = TRUE)), # parameter yang digunakan dalam berbagai fungsi untuk menentukan apakah nilai NA  harus diabaikan atau tidak 
                      dataset$Age) #ave untuk menghitung rata2
 
 dataset$Salary = ifelse(is.na(dataset$Salary),
